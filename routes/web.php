@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use  App\Http\Controllers\HomeController;
-use App\Http\Controllers\FormController;
+use  App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +13,6 @@ use App\Http\Controllers\FormController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/news', [HomeController::class, 'news'])->name('news');
-Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::get('/about-us', [HomeController::class, 'about'])->name('about');
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/genre', [DashboardController::class, 'genre'])->name('genre');
+Route::get('/movie', [DashboardController::class, 'movie'])->name('movie');
