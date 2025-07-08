@@ -4,7 +4,7 @@
 
 <div class="container mt-5">
 
-    <p class="text-center text-muted">Welcome to your admin dashboard. You can manage everything from here.</p> 
+    <p class="text-center text-muted">Welcome to your admin dashboard. </p> 
     <hr>
     <h2 class="text-center mb-4">Dashboard</h2>
     

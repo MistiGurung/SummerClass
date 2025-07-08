@@ -13,13 +13,13 @@
   
    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
+        <a class="nav-link {{ Route::is('admin.dashboard.index') ? 'active' : '' }}" href="{{ route('admin.dashboard.index') }}">Dashboard</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('movie') }}">Movies</a>
+        <a class="nav-link {{ Route::is('admin.movie.index') ? 'active' : '' }}" href="{{ route('admin.movie.index') }}">Movies</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('genre') }}">Genres</a>
+        <a class="nav-link {{ Route::is('admin.genre.index') ? 'active' : '' }}" href="{{ route('admin.genre.index') }}">Genres</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Users</a>

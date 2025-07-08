@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin; 
 
+use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\Genre;
 use App\Models\Movie;
@@ -22,17 +23,8 @@ class DashboardController extends Controller
         ];
         $movies= Movie::latest()->get(['id', 'name']); //select * from movies order by id desc
 
-        return view('admin.dashboard', compact('title', 'statistics', 'movies'));
+        return view('admin.dashboard.index', compact('title', 'statistics', 'movies'));
     }
-    public function genre()
-    {
-        $title = 'Genres';
-        return view('admin.genres', compact('title'));
-
-    }
-    public function movie()
-    {
-        $title = 'Movies';
-        return view('admin.movies', compact('title'));
-    }
+    
+    
 }
